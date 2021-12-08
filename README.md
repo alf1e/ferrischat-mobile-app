@@ -1,16 +1,16 @@
-# ferrischat
+# FerrisChat
 
-A new Flutter project.
+Welcom to a FerrisChatn mobile app created with flutter!
 
-## Getting Started
+# Installation
 
-This project is a starting point for a Flutter application.
+Installation is not currently avalible
 
-A few resources to get you started if this is your first Flutter project:
+# Debug
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+To debug download the code into a VSC instance with dart and flutter installed. Launch your emulator and then run the code with debug
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Infomation
+
+Created by ItsMeAlfie0#0001 on discord
+Made with (dart)[https://dart.dev/] and (Flutter Engine)[https://flutter.dev/]
