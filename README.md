@@ -13,4 +13,4 @@ To debug download the code into a VSC instance with dart and flutter installed. 
 # Infomation
 
 Created by ItsMeAlfie0#0001 on discord
-Made with (dart)[https://dart.dev/] and (Flutter Engine)[https://flutter.dev/]
+Made with [dart](https://dart.dev/) and [Flutter Engine](https://flutter.dev/)
