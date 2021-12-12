@@ -1,4 +1,4 @@
-IMPORTANT NOTE: This app is Android only, please visit [this]{https://github.com/hydrostaticcog/iOS} for the IOS app
+> IMPORTANT NOTE: This app is Android only, please visit [this](https://github.com/hydrostaticcog/iOS) for the IOS app
 
 # FerrisChat 
 
