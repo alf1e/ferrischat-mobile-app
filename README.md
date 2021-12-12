@@ -1,4 +1,6 @@
-# FerrisChat
+# **IMPORTANT NOTE: This app is Android only, please visit [this]{https://github.com/hydrostaticcog/iOS} for the IOS app**
+
+# FerrisChat 
 
 Welcom to a FerrisChatn mobile app created with flutter!
 

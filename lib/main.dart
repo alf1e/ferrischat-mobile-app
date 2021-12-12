@@ -62,14 +62,18 @@ class _HomeState extends State<HomePage> {
               title: const Text("FerrisChat"),
               backgroundColor: Colors.orange,
             ),
-            bottomNavigationBar: BottomNavigationBar(items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.message), label: 'Messages')
-            ], currentIndex: _selectedIndex, onTap: _onItemTapped),
+            bottomNavigationBar: BottomNavigationBar(
+                items: [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.home),
+                    label: 'Home',
+                  ),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.message), label: 'Messages')
+                ],
+                currentIndex: _selectedIndex,
+                onTap: _onItemTapped,
+                selectedItemColor: Colors.orange),
             body: Center(child: _pages.elementAt(_selectedIndex))));
   }
 }
