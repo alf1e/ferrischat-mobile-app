@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import './setings.dart';
 import 'package:flutter/material.dart';
 import './login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -55,26 +56,32 @@ class _HomeState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> _pages = <Widget>[Home(), DMS()];
+    List<Widget> _pages = <Widget>[Home(), DMS(), Settings(pcon: context)];
     return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text("FerrisChat"),
-              backgroundColor: Colors.orange,
-            ),
-            bottomNavigationBar: BottomNavigationBar(
-                items: [
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.home),
-                    label: 'Home',
-                  ),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.message), label: 'Messages')
-                ],
-                currentIndex: _selectedIndex,
-                onTap: _onItemTapped,
-                selectedItemColor: Colors.orange),
-            body: Center(child: _pages.elementAt(_selectedIndex))));
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("FerrisChat"),
+          backgroundColor: Colors.orange,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.message), label: 'Messages'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.settings), label: 'Settings')
+            ],
+            currentIndex: _selectedIndex,
+            onTap: _onItemTapped,
+            selectedItemColor: Colors.orange),
+        body: Center(
+          child: _pages.elementAt(_selectedIndex),
+        ),
+      ),
+    );
   }
 }
 
