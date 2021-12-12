@@ -64,30 +64,31 @@ class _State extends State<Login> {
                       ),
                     ),
                     Container(
-                        height: 50,
-                        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                        child: RaisedButton(
-                          textColor: Colors.white,
-                          color: Colors.blue,
-                          child: Text('Login'),
-                          onPressed: () async {
-                            var r = await http.post(
-                              Uri.parse("https://api.ferris.chat/v0/auth"),
-                              body: jsonEncode({
-                                "email": nameController.text,
-                                "password": passwordController.text
-                              }),
-                              headers: {"Content-Type": "application/json"},
-                            );
-                            dynamic json = jsonDecode(r.body);
-                            SharedPreferences prefs =
-                                await SharedPreferences.getInstance();
-                            prefs.setString('ferris-token', json["token"]);
+                      height: 50,
+                      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: RaisedButton(
+                        textColor: Colors.white,
+                        color: Colors.blue,
+                        child: Text('Login'),
+                        onPressed: () async {
+                          var r = await http.post(
+                            Uri.parse("https://api.ferris.chat/v0/auth"),
+                            body: jsonEncode({
+                              "email": nameController.text,
+                              "password": passwordController.text
+                            }),
+                            headers: {"Content-Type": "application/json"},
+                          );
+                          dynamic json = jsonDecode(r.body);
+                          SharedPreferences prefs =
+                              await SharedPreferences.getInstance();
+                          prefs.setString('ferris-token', json["token"]);
 
-                            var nav = Navigator.of(context);
-                            nav.pushNamed("/");
-                          },
-                        )),
+                          var nav = Navigator.of(context);
+                          nav.pushNamed("/");
+                        },
+                      ),
+                    ),
                   ],
                 ))));
   }
